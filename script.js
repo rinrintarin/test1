@@ -21,7 +21,7 @@
       };
 
       // Send the email using EmailJS
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
+      emailjs.send('service_lg8lnm5', 'template_3ccb7fp', templateParams, 'YZcQvqy2JGrh8bSzq')
         .then(function(response) {
           console.log('Email sent successfully!', response.status, response.text);
           alert('Receipt email sent successfully!');
