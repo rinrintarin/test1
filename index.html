@@ -1,24 +1,44 @@
-<form id="tutoring-form">
-  <h2>Select Subjects and Time Slots</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tutoring Help</title>
+</head>
+<body>
+  <h1>Tutoring Help</h1>
   
-  <label>
-    <input type="checkbox" name="subjects" value="Math"> Math
-  </label>
-  <label>
-    <input type="checkbox" name="subjects" value="Science"> Science
-  </label>
-  <!-- Add more subject checkboxes here -->
-  
-  <label>
-    Select Time Slot:
-    <select name="time-slot">
-      <option value="8-9am">8am - 9am</option>
-      <option value="9-10am">9am - 10am</option>
-      <!-- Add more time slot options here -->
+  <form>
+    <label for="studentName">Please enter student name:</label>
+    <input type="text" id="studentName" name="studentName" required>
+    
+    <br>
+    
+    <label for="email">Please enter your email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <br>
+    
+    <label for="tutoringLevel">Please select the level of tutoring required:</label>
+    <select id="tutoringLevel" name="tutoringLevel">
+      <option value="elementary" data-price="50">Elementary</option>
+      <option value="middleSchool" data-price="75">Middle School</option>
+      <option value="highSchool" data-price="100">High School</option>
+      <option value="college" data-price="125">College</option>
     </select>
-  </label>
-
-  <h3>Total Cost: <span id="total-cost">$0</span></h3>
-  
-  <button type="submit">Add to Cart</button>
-</form>
+    
+    <br>
+    
+    <label for="subject">Please select the subject:</label>
+    <select id="subject" name="subject">
+      <option value="math" data-price="20">Math</option>
+      <option value="english" data-price="20">English</option>
+      <option value="business" data-price="15">Business</option>
+      <option value="accounting" data-price="15">Accounting</option>
+      <option value="economics" data-price="15">Economics</option>
+    </select>
+    
+    <br>
+    
+    <button type="submit" onclick="sendReceiptEmail()">Submit</button>
+  </form>
+</body>
+</html>
